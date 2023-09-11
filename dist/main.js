@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_LinkedList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/LinkedList */ \"./src/modules/LinkedList.js\");\n\n\nconst myList = new _modules_LinkedList__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\nmyList.prepend('2');\nmyList.prepend('1');\nmyList.append('4');\nmyList.append('5');\nmyList.size();\nmyList.head();\nmyList.tail();\nmyList.at(3);\nmyList.pop();\nmyList.contains('5');\nmyList.find('3');\nmyList.insertAt(2, '3');\nmyList.deleteAt(0);\nmyList.toString();\nconsole.log(myList.list);\n\n\n//# sourceURL=webpack://linked-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_LinkedList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/LinkedList */ \"./src/modules/LinkedList.js\");\n\n\nconst myList = new _modules_LinkedList__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\nmyList.prepend('2');\nmyList.prepend('1');\nmyList.append('4');\nmyList.append('5');\nmyList.size();\nmyList.head();\nmyList.tail();\nmyList.at(3);\nmyList.pop();\nmyList.contains('5');\nmyList.find('3');\nmyList.insertAt(2, '3');\nmyList.deleteAt(1);\nmyList.toString();\nconsole.log(myList.list);\n\n\n//# sourceURL=webpack://linked-list/./src/index.js?");
 
 /***/ }),
 

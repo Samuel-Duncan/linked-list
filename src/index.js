@@ -13,6 +13,6 @@ myList.pop();
 myList.contains('5');
 myList.find('3');
 myList.insertAt(2, '3');
-myList.deleteAt(0);
+myList.deleteAt(1);
 myList.toString();
 console.log(myList.list);
