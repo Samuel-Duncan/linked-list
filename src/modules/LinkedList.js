@@ -42,6 +42,7 @@ export default class LinkedList {
       console.log(`head: ${this.list.head.value}`);
       return this.list.head.value;
     }
+
     console.log('No nodes are on the list');
     return undefined;
   }
@@ -66,7 +67,7 @@ export default class LinkedList {
       counter++;
     }
 
-    console.log(`value: ${current.value} at index: ${counter}`);
+    console.log(`at index: ${counter} value: ${current.value}`);
     return current.value;
   }
 
@@ -90,10 +91,11 @@ export default class LinkedList {
     }
 
     if (current.value === value) {
-      console.log(`contains value ${value}? True or False: True`);
+      console.log(`contains value ${value}? True`);
       return true;
     }
-    console.log(`contains value ${value}? True or False: False`);
+
+    console.log(`contains value ${value}? False`);
     return false;
   }
 
@@ -105,8 +107,47 @@ export default class LinkedList {
       current = current.next;
       index++;
     }
+
     console.log(`find index: ${index}`);
     return index;
+  }
+
+  insertAt(index, value) {
+    if (this.list.head == null || index === 0) {
+      this.prepend(value);
+      return;
+    }
+
+    let counter = 0;
+    let current = this.list.head;
+    let previous = null;
+    while (current != null && index > counter) {
+      previous = current;
+      counter++;
+      current = current.next;
+    }
+
+    if (current != null) previous.next = new Node(value, current);
+  }
+
+  deleteAt(index) {
+    if (this.list.head == null) throw new Error('Cannot delete');
+
+    if (index === 0) {
+      this.list.head = this.list.head.next;
+      return;
+    }
+
+    let counter = 0;
+    let current = this.list.head;
+    let previous = null;
+    while (current != null && index > counter) {
+      previous = current;
+      counter++;
+      current = current.next;
+    }
+
+    if (current != null) previous.next = current.next;
   }
 
   toString() {
@@ -117,6 +158,7 @@ export default class LinkedList {
       string += `( ${current.value} ) -> `;
       current = current.next;
     }
+
     string += `( ${current.value} )`;
     console.log(string);
     return string;
